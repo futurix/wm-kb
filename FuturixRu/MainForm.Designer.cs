@@ -1,12 +1,12 @@
 ﻿namespace FuturixRu
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.MainMenu mainMenu1;
+        private System.Windows.Forms.MainMenu mainMenu;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -29,9 +29,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
+            System.Windows.Forms.MenuItem miSep1;
+            System.Windows.Forms.MenuItem miSep2;
+            System.Windows.Forms.MenuItem miSep3;
+            this.mainMenu = new System.Windows.Forms.MainMenu();
+            this.mEdit = new System.Windows.Forms.MenuItem();
+            this.miCut = new System.Windows.Forms.MenuItem();
+            this.miCopy = new System.Windows.Forms.MenuItem();
+            this.miPaste = new System.Windows.Forms.MenuItem();
+            this.miClear = new System.Windows.Forms.MenuItem();
+            this.miOpen = new System.Windows.Forms.MenuItem();
+            this.miSave = new System.Windows.Forms.MenuItem();
+            this.mTools = new System.Windows.Forms.MenuItem();
+            this.miAbout = new System.Windows.Forms.MenuItem();
+            this.miClose = new System.Windows.Forms.MenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button25 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
@@ -75,26 +86,92 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMain = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
+            this.dlgSave = new System.Windows.Forms.SaveFileDialog();
+            miSep1 = new System.Windows.Forms.MenuItem();
+            miSep2 = new System.Windows.Forms.MenuItem();
+            miSep3 = new System.Windows.Forms.MenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mainMenu1
+            // miSep1
             // 
-            this.mainMenu1.MenuItems.Add(this.menuItem1);
-            this.mainMenu1.MenuItems.Add(this.menuItem2);
+            miSep1.Text = "-";
             // 
-            // menuItem1
+            // miSep2
             // 
-            this.menuItem1.Text = "Copy";
-            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
+            miSep2.Text = "-";
             // 
-            // menuItem2
+            // miSep3
             // 
-            this.menuItem2.Text = "Paste";
-            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
+            miSep3.Text = "-";
+            // 
+            // mainMenu
+            // 
+            this.mainMenu.MenuItems.Add(this.mEdit);
+            this.mainMenu.MenuItems.Add(this.mTools);
+            // 
+            // mEdit
+            // 
+            this.mEdit.MenuItems.Add(this.miCut);
+            this.mEdit.MenuItems.Add(this.miCopy);
+            this.mEdit.MenuItems.Add(this.miPaste);
+            this.mEdit.MenuItems.Add(miSep1);
+            this.mEdit.MenuItems.Add(this.miClear);
+            this.mEdit.MenuItems.Add(miSep2);
+            this.mEdit.MenuItems.Add(this.miOpen);
+            this.mEdit.MenuItems.Add(this.miSave);
+            this.mEdit.Text = "Edit";
+            // 
+            // miCut
+            // 
+            this.miCut.Text = "Cut";
+            this.miCut.Click += new System.EventHandler(this.miCut_Click);
+            // 
+            // miCopy
+            // 
+            this.miCopy.Text = "Copy";
+            this.miCopy.Click += new System.EventHandler(this.miCopy_Click);
+            // 
+            // miPaste
+            // 
+            this.miPaste.Text = "Paste";
+            this.miPaste.Click += new System.EventHandler(this.miPaste_Click);
+            // 
+            // miClear
+            // 
+            this.miClear.Text = "Clear";
+            this.miClear.Click += new System.EventHandler(this.miClear_Click);
+            // 
+            // miOpen
+            // 
+            this.miOpen.Text = "Open";
+            this.miOpen.Click += new System.EventHandler(this.miOpen_Click);
+            // 
+            // miSave
+            // 
+            this.miSave.Text = "Save";
+            this.miSave.Click += new System.EventHandler(this.miSave_Click);
+            // 
+            // mTools
+            // 
+            this.mTools.MenuItems.Add(this.miAbout);
+            this.mTools.MenuItems.Add(miSep3);
+            this.mTools.MenuItems.Add(this.miClose);
+            this.mTools.Text = "Tools";
+            // 
+            // miAbout
+            // 
+            this.miAbout.Text = "About";
+            this.miAbout.Click += new System.EventHandler(this.miAbout_Click);
+            // 
+            // miClose
+            // 
+            this.miClose.Text = "Close";
+            this.miClose.Click += new System.EventHandler(this.miClose_Click);
             // 
             // panel1
             // 
@@ -154,7 +231,7 @@
             this.button25.Size = new System.Drawing.Size(36, 40);
             this.button25.TabIndex = 46;
             this.button25.Text = "-";
-            this.button25.Click += new System.EventHandler(this.button1_Click);
+            this.button25.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button37
             // 
@@ -164,7 +241,7 @@
             this.button37.Size = new System.Drawing.Size(36, 40);
             this.button37.TabIndex = 45;
             this.button37.Text = "\"";
-            this.button37.Click += new System.EventHandler(this.button1_Click);
+            this.button37.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button38
             // 
@@ -174,7 +251,7 @@
             this.button38.Size = new System.Drawing.Size(36, 40);
             this.button38.TabIndex = 44;
             this.button38.Text = ",";
-            this.button38.Click += new System.EventHandler(this.button1_Click);
+            this.button38.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button40
             // 
@@ -184,7 +261,7 @@
             this.button40.Size = new System.Drawing.Size(36, 40);
             this.button40.TabIndex = 42;
             this.button40.Text = ".";
-            this.button40.Click += new System.EventHandler(this.button1_Click);
+            this.button40.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button45
             // 
@@ -194,7 +271,7 @@
             this.button45.Size = new System.Drawing.Size(252, 40);
             this.button45.TabIndex = 37;
             this.button45.Text = " ";
-            this.button45.Click += new System.EventHandler(this.button1_Click);
+            this.button45.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button46
             // 
@@ -204,7 +281,7 @@
             this.button46.Size = new System.Drawing.Size(36, 40);
             this.button46.TabIndex = 36;
             this.button46.Text = "!";
-            this.button46.Click += new System.EventHandler(this.button1_Click);
+            this.button46.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button47
             // 
@@ -214,7 +291,7 @@
             this.button47.Size = new System.Drawing.Size(36, 40);
             this.button47.TabIndex = 35;
             this.button47.Text = "?";
-            this.button47.Click += new System.EventHandler(this.button1_Click);
+            this.button47.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button26
             // 
@@ -224,7 +301,7 @@
             this.button26.Size = new System.Drawing.Size(72, 40);
             this.button26.TabIndex = 34;
             this.button26.Text = "згл";
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.button26.Click += new System.EventHandler(this.buttonShift_Click);
             // 
             // button27
             // 
@@ -234,7 +311,7 @@
             this.button27.Size = new System.Drawing.Size(36, 40);
             this.button27.TabIndex = 33;
             this.button27.Text = "Ъ";
-            this.button27.Click += new System.EventHandler(this.button1_Click);
+            this.button27.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button28
             // 
@@ -244,7 +321,7 @@
             this.button28.Size = new System.Drawing.Size(36, 40);
             this.button28.TabIndex = 32;
             this.button28.Text = "М";
-            this.button28.Click += new System.EventHandler(this.button1_Click);
+            this.button28.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button29
             // 
@@ -254,7 +331,7 @@
             this.button29.Size = new System.Drawing.Size(36, 40);
             this.button29.TabIndex = 31;
             this.button29.Text = "Ь";
-            this.button29.Click += new System.EventHandler(this.button1_Click);
+            this.button29.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button30
             // 
@@ -264,7 +341,7 @@
             this.button30.Size = new System.Drawing.Size(36, 40);
             this.button30.TabIndex = 30;
             this.button30.Text = "Н";
-            this.button30.Click += new System.EventHandler(this.button1_Click);
+            this.button30.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button31
             // 
@@ -274,7 +351,7 @@
             this.button31.Size = new System.Drawing.Size(36, 40);
             this.button31.TabIndex = 29;
             this.button31.Text = "Б";
-            this.button31.Click += new System.EventHandler(this.button1_Click);
+            this.button31.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button32
             // 
@@ -284,7 +361,7 @@
             this.button32.Size = new System.Drawing.Size(36, 40);
             this.button32.TabIndex = 28;
             this.button32.Text = "В";
-            this.button32.Click += new System.EventHandler(this.button1_Click);
+            this.button32.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button33
             // 
@@ -294,7 +371,7 @@
             this.button33.Size = new System.Drawing.Size(36, 40);
             this.button33.TabIndex = 27;
             this.button33.Text = "Ц";
-            this.button33.Click += new System.EventHandler(this.button1_Click);
+            this.button33.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button34
             // 
@@ -304,7 +381,7 @@
             this.button34.Size = new System.Drawing.Size(36, 40);
             this.button34.TabIndex = 26;
             this.button34.Text = "Ж";
-            this.button34.Click += new System.EventHandler(this.button1_Click);
+            this.button34.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button35
             // 
@@ -314,7 +391,7 @@
             this.button35.Size = new System.Drawing.Size(36, 40);
             this.button35.TabIndex = 25;
             this.button35.Text = "З";
-            this.button35.Click += new System.EventHandler(this.button1_Click);
+            this.button35.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button36
             // 
@@ -324,7 +401,7 @@
             this.button36.Size = new System.Drawing.Size(36, 40);
             this.button36.TabIndex = 24;
             this.button36.Text = "Ч";
-            this.button36.Click += new System.EventHandler(this.button1_Click);
+            this.button36.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button13
             // 
@@ -334,7 +411,7 @@
             this.button13.Size = new System.Drawing.Size(48, 160);
             this.button13.TabIndex = 23;
             this.button13.Text = "<";
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button13.Click += new System.EventHandler(this.buttonBackspace_Click);
             // 
             // button14
             // 
@@ -344,7 +421,7 @@
             this.button14.Size = new System.Drawing.Size(36, 40);
             this.button14.TabIndex = 22;
             this.button14.Text = "Щ";
-            this.button14.Click += new System.EventHandler(this.button1_Click);
+            this.button14.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button15
             // 
@@ -354,7 +431,7 @@
             this.button15.Size = new System.Drawing.Size(36, 40);
             this.button15.TabIndex = 21;
             this.button15.Text = "Л";
-            this.button15.Click += new System.EventHandler(this.button1_Click);
+            this.button15.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button16
             // 
@@ -364,7 +441,7 @@
             this.button16.Size = new System.Drawing.Size(36, 40);
             this.button16.TabIndex = 20;
             this.button16.Text = "К";
-            this.button16.Click += new System.EventHandler(this.button1_Click);
+            this.button16.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button17
             // 
@@ -374,7 +451,7 @@
             this.button17.Size = new System.Drawing.Size(36, 40);
             this.button17.TabIndex = 19;
             this.button17.Text = "Ё";
-            this.button17.Click += new System.EventHandler(this.button1_Click);
+            this.button17.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button18
             // 
@@ -384,7 +461,7 @@
             this.button18.Size = new System.Drawing.Size(36, 40);
             this.button18.TabIndex = 18;
             this.button18.Text = "Й";
-            this.button18.Click += new System.EventHandler(this.button1_Click);
+            this.button18.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button19
             // 
@@ -394,7 +471,7 @@
             this.button19.Size = new System.Drawing.Size(36, 40);
             this.button19.TabIndex = 17;
             this.button19.Text = "Х";
-            this.button19.Click += new System.EventHandler(this.button1_Click);
+            this.button19.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button20
             // 
@@ -404,7 +481,7 @@
             this.button20.Size = new System.Drawing.Size(36, 40);
             this.button20.TabIndex = 16;
             this.button20.Text = "Г";
-            this.button20.Click += new System.EventHandler(this.button1_Click);
+            this.button20.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button21
             // 
@@ -414,7 +491,7 @@
             this.button21.Size = new System.Drawing.Size(36, 40);
             this.button21.TabIndex = 15;
             this.button21.Text = "Ф";
-            this.button21.Click += new System.EventHandler(this.button1_Click);
+            this.button21.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button22
             // 
@@ -424,7 +501,7 @@
             this.button22.Size = new System.Drawing.Size(36, 40);
             this.button22.TabIndex = 14;
             this.button22.Text = "Д";
-            this.button22.Click += new System.EventHandler(this.button1_Click);
+            this.button22.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button23
             // 
@@ -434,7 +511,7 @@
             this.button23.Size = new System.Drawing.Size(36, 40);
             this.button23.TabIndex = 13;
             this.button23.Text = "С";
-            this.button23.Click += new System.EventHandler(this.button1_Click);
+            this.button23.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button24
             // 
@@ -444,7 +521,7 @@
             this.button24.Size = new System.Drawing.Size(36, 40);
             this.button24.TabIndex = 12;
             this.button24.Text = "А";
-            this.button24.Click += new System.EventHandler(this.button1_Click);
+            this.button24.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button12
             // 
@@ -454,7 +531,7 @@
             this.button12.Size = new System.Drawing.Size(36, 40);
             this.button12.TabIndex = 11;
             this.button12.Text = "Ю";
-            this.button12.Click += new System.EventHandler(this.button1_Click);
+            this.button12.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button11
             // 
@@ -464,7 +541,7 @@
             this.button11.Size = new System.Drawing.Size(36, 40);
             this.button11.TabIndex = 10;
             this.button11.Text = "Э";
-            this.button11.Click += new System.EventHandler(this.button1_Click);
+            this.button11.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button10
             // 
@@ -474,7 +551,7 @@
             this.button10.Size = new System.Drawing.Size(36, 40);
             this.button10.TabIndex = 9;
             this.button10.Text = "О";
-            this.button10.Click += new System.EventHandler(this.button1_Click);
+            this.button10.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button9
             // 
@@ -484,7 +561,7 @@
             this.button9.Size = new System.Drawing.Size(36, 40);
             this.button9.TabIndex = 8;
             this.button9.Text = "И";
-            this.button9.Click += new System.EventHandler(this.button1_Click);
+            this.button9.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button8
             // 
@@ -494,7 +571,7 @@
             this.button8.Size = new System.Drawing.Size(36, 40);
             this.button8.TabIndex = 7;
             this.button8.Text = "П";
-            this.button8.Click += new System.EventHandler(this.button1_Click);
+            this.button8.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button7
             // 
@@ -504,7 +581,7 @@
             this.button7.Size = new System.Drawing.Size(36, 40);
             this.button7.TabIndex = 6;
             this.button7.Text = "У";
-            this.button7.Click += new System.EventHandler(this.button1_Click);
+            this.button7.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button6
             // 
@@ -514,7 +591,7 @@
             this.button6.Size = new System.Drawing.Size(36, 40);
             this.button6.TabIndex = 5;
             this.button6.Text = "Ы";
-            this.button6.Click += new System.EventHandler(this.button1_Click);
+            this.button6.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button5
             // 
@@ -524,7 +601,7 @@
             this.button5.Size = new System.Drawing.Size(36, 40);
             this.button5.TabIndex = 4;
             this.button5.Text = "Т";
-            this.button5.Click += new System.EventHandler(this.button1_Click);
+            this.button5.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button4
             // 
@@ -534,7 +611,7 @@
             this.button4.Size = new System.Drawing.Size(36, 40);
             this.button4.TabIndex = 3;
             this.button4.Text = "Р";
-            this.button4.Click += new System.EventHandler(this.button1_Click);
+            this.button4.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button3
             // 
@@ -544,7 +621,7 @@
             this.button3.Size = new System.Drawing.Size(36, 40);
             this.button3.TabIndex = 2;
             this.button3.Text = "Е";
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button2
             // 
@@ -554,7 +631,7 @@
             this.button2.Size = new System.Drawing.Size(36, 40);
             this.button2.TabIndex = 1;
             this.button2.Text = "Ш";
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
             // button1
             // 
@@ -564,18 +641,18 @@
             this.button1.Size = new System.Drawing.Size(36, 40);
             this.button1.TabIndex = 0;
             this.button1.Text = "Я";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.buttonLetter_Click);
             // 
-            // textBox1
+            // txtMain
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(480, 216);
-            this.textBox1.TabIndex = 1;
+            this.txtMain.AcceptsReturn = true;
+            this.txtMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMain.Location = new System.Drawing.Point(0, 0);
+            this.txtMain.Multiline = true;
+            this.txtMain.Name = "txtMain";
+            this.txtMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMain.Size = new System.Drawing.Size(480, 216);
+            this.txtMain.TabIndex = 1;
             // 
             // panel2
             // 
@@ -586,19 +663,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(480, 160);
             // 
-            // Form1
+            // dlgOpen
+            // 
+            this.dlgOpen.Filter = "Text files|*.txt";
+            // 
+            // dlgSave
+            // 
+            this.dlgSave.FileName = "Notes.txt";
+            this.dlgSave.Filter = "Text files|*.txt";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(480, 376);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMain);
             this.Controls.Add(this.panel2);
             this.Location = new System.Drawing.Point(0, 52);
-            this.Menu = this.mainMenu1;
+            this.Menu = this.mainMenu;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Futurix i18n";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.MainForm_Closing);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -607,10 +695,10 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuItem menuItem1;
-        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem miCopy;
+        private System.Windows.Forms.MenuItem miPaste;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMain;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
@@ -654,6 +742,16 @@
         private System.Windows.Forms.Button button46;
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MenuItem mEdit;
+        private System.Windows.Forms.MenuItem mTools;
+        private System.Windows.Forms.MenuItem miCut;
+        private System.Windows.Forms.MenuItem miClear;
+        private System.Windows.Forms.MenuItem miOpen;
+        private System.Windows.Forms.MenuItem miSave;
+        private System.Windows.Forms.MenuItem miClose;
+        private System.Windows.Forms.MenuItem miAbout;
+        private System.Windows.Forms.OpenFileDialog dlgOpen;
+        private System.Windows.Forms.SaveFileDialog dlgSave;
     }
 }
 
