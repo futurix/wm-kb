@@ -1,0 +1,5 @@
+FuturixRu/bin/*
+FuturixRu/obj/*
+*.csproj.user
+*.suo
+FuturixRuDist/Release/*

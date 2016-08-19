@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuturixRu", "FuturixRu.csproj", "{92B692CD-DAB3-473E-834F-3328A65AAFB9}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "FuturixRuDist", "..\FuturixRuDist\FuturixRuDist.vddproj", "{1C392D91-A341-45A8-8F02-36F4A18AADCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92B692CD-DAB3-473E-834F-3328A65AAFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B692CD-DAB3-473E-834F-3328A65AAFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B692CD-DAB3-473E-834F-3328A65AAFB9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92B692CD-DAB3-473E-834F-3328A65AAFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B692CD-DAB3-473E-834F-3328A65AAFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B692CD-DAB3-473E-834F-3328A65AAFB9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1C392D91-A341-45A8-8F02-36F4A18AADCB}.Debug|Any CPU.ActiveCfg = Debug
+		{1C392D91-A341-45A8-8F02-36F4A18AADCB}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
